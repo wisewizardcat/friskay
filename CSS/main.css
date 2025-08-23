@@ -86,6 +86,7 @@ a.primary-cta {
     font-size: 1.3rem;
     color: black;
     border-radius: .4em;
+    margin-top: 2em;
 }
 
 .cat-container {
@@ -114,8 +115,8 @@ a.primary-cta {
     }
     
     .inner-circle {
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: 300px;
         background: #f4e4c1;
         z-index: -1;
     }
@@ -125,5 +126,102 @@ a.primary-cta {
         width: 500px;
         background: white;
         z-index: -2;
+    }
+}
+
+@media (min-width: 800px) {
+    .wrap {
+        margin: 0em 4em;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .header-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+
+        .divider {
+            height: 2em;
+            width: 2px;
+            background: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.25rem;
+        }
+    }
+
+    nav ul {
+            position: unset;
+            background: none;
+            display: flex;
+            gap: 2em;
+            height: auto;
+            width: auto;
+            transform: translateX(0%);
+
+            li a {
+                font-size: 1.25rem;
+            }
+        }
+}
+
+@media (min-width: 1000px) {
+    h1, p {
+        text-align: left;
+    }
+
+    h1 img {
+        margin: 0;
+    }
+
+    main {
+        width: 50%;
+    }
+
+    .cat-container {
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        top: 20%;
+        right: 0;
+
+        .inner-circle {
+            height: 500px;
+            width: 500px;
+        }
+
+        .outer-circle {
+            height: 1000px;
+            width: 1000px;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .wrap {
+        margin: 0em auto;
+        padding: 0 2em;
+        max-width: 1200px;
+    }
+
+    a.primary-cta {
+        display: inline-block;
+        width: auto;
+        padding: 1em 2em;
+    }
+
+    .cat img {
+        max-width: 400px;
     }
 }
